@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+}
+.card{
+  background:white;
+  width:340px;
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+  animation:fade 1.5s ease;
+}
+img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #ff4d6d;
+}
+h1{
+  margin:15px 0 5px;
+  color:#ff2f68;
+}
+p{
+  color:#333;
+  font-size:15px;
+  line-height:1.5;
+}
+button{
+  margin-top:15px;
+  padding:10px 25px;
+  border:none;
+  border-radius:30px;
+  background:#ff2f68;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{
+  background:#e61e56;
+}
+.heart{
+  font-size:40px;
+  animation:beat 1s infinite;
+  margin-top:10px;
+}
+@keyframes beat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.3);}
+}
+@keyframes fade{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" src="music.mp3"></audio>
+
+<div class="card">
+  <img src="photo.jpg" alt="My Love">
+  <h1>Anchi ❤️</h1>
+  <p>
+    Tum meri zindagi ho.<br>
+    Tumhari muskaan meri duniya hai.<br>
+    Har saans me sirf tum ho.
+  </p>
+  <button onclick="playMusic()">Play Music 🎶</button>
+  <div class="heart">💖</div>
+</div>
+
+<script>
+function playMusic(){
+  document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
